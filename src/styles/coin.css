@@ -1,0 +1,20 @@
+.coin-container{
+    background-color: rgb(187, 135, 135);
+    opacity: 0.8;
+    border-radius: 5px;
+    padding: 10px;
+    color: beige;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.coin-container:first-child {
+    grid-column: 1/span 2;
+    opacity: 1;
+}
+button{
+    padding: 6px;
+    width: 60px;
+    border-radius: 5px;
+    border: none;
+}
