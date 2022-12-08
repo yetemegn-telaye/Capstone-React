@@ -46,7 +46,6 @@ const HomePage = () => {
               coinName={coin.coinName}
               symbol={coin.symbol}
               rank={coin.rank}
-              coinPrice={coin.priceUsd}
             />
           ))}
         </div>
