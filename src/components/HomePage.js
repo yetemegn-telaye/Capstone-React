@@ -28,7 +28,14 @@ const HomePage = () => {
         </div>
         <div className="coins-container">
           {coinsArr.filter((coin) => (search.toLowerCase() === '' ? coin : coin.coinName.toLowerCase().includes(search))).map((coin) => (
-            <Coin key={coin.id} coinId={coin.id} coinName={coin.coinName} symbol={coin.symbol} rank={coin.rank} coinPrice={coin.priceUsd} />
+            <Coin
+              key={coin.id}
+              coinId={coin.id}
+              coinName={coin.coinName}
+              symbol={coin.symbol}
+              rank={coin.rank}
+              coinPrice={coin.priceUsd}
+            />
           ))}
         </div>
       </div>
