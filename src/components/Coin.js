@@ -2,30 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../styles/coin.css';
 import { Link } from 'react-router-dom';
+import { FcRight } from 'react-icons/fc';
 
 const Coin = (props) => {
   const {
-    coinId, coinName, symbol, rank, coinPrice,
+    coinId, coinName, symbol, rank,
   } = props;
   return (
-    <div className="coin-container">
-      <h4>
+    <Link to={`/coin-details/${coinId}`} className="coin-container">
+      <h3>
         {coinName}
         {' '}
         (
         {symbol}
         )
-      </h4>
+      </h3>
       <p>
-        Rank:
+        RANK:
         {rank}
       </p>
-      <p>
-        Price:
-        {parseFloat(coinPrice).toFixed(3)}
-      </p>
-      <Link to={`/coin-details/${coinId}`}>View</Link>
-    </div>
+      <Link to={`/coin-details/${coinId}`}><FcRight /></Link>
+    </Link>
   );
 };
 Coin.propTypes = {
@@ -33,7 +30,6 @@ Coin.propTypes = {
   coinName: PropTypes.string.isRequired,
   symbol: PropTypes.string.isRequired,
   rank: PropTypes.string.isRequired,
-  coinPrice: PropTypes.string.isRequired,
 };
 
 export default Coin;

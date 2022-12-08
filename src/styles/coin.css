@@ -1,9 +1,12 @@
 .coin-container {
-  background-color: rgb(187, 135, 135);
+  background-color: rgb(172, 137, 204);
+  text-decoration: none;
+  color: rgb(255, 255, 255);
   opacity: 0.8;
-  border-radius: 5px;
+  border-radius: 10px;
+  border: 2px solid rgb(172, 137, 204);
+  box-shadow: 8px 5px 4px #dfdfdf;
   padding: 10px;
-  color: beige;
   display: flex;
   flex-direction: column;
   gap: 3px;
@@ -12,6 +15,16 @@
 .coin-container:first-child {
   grid-column: 1/span 2;
   opacity: 1;
+  background-image: linear-gradient(to bottom, rgb(168, 141, 194), rgb(220, 216, 216));
+  text-align: center;
+}
+
+h3 {
+  font-weight: 900;
+}
+
+.coin-container p {
+  font-weight: 600;
 }
 
 button {
