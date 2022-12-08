@@ -1,4 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { FaSearch } from 'react-icons/fa';
+import { BiCoinStack } from 'react-icons/bi';
+import Navbar from 'react-bootstrap/Navbar';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCoinsData } from '../redux/coins';
 import Coin from './Coin';
@@ -20,12 +23,21 @@ const HomePage = () => {
   if (coinsArr.length > 0) {
     return (
       <div className="home-container">
-        <div className="nav">
-          <h4>Home</h4>
+        <Navbar bg="light" className="nav home-nav">
+          <div className="brand">
+            <BiCoinStack />
+            <h2>
+              HOME
+            </h2>
+          </div>
+
           <form>
+            <FaSearch className="search-icon" />
             <input onChange={(e) => setSearch(e.target.value)} placeholder="Search coins" />
+            {' '}
+
           </form>
-        </div>
+        </Navbar>
         <div className="coins-container">
           {coinsArr.filter((coin) => (search.toLowerCase() === '' ? coin : coin.coinName.toLowerCase().includes(search))).map((coin) => (
             <Coin

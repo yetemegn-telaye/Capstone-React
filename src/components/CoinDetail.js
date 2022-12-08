@@ -1,7 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
-import { BsFillArrowLeftCircleFill } from 'react-icons/bs';
+import { FaChevronLeft } from 'react-icons/fa';
+import '../styles/coindetail.css';
 
 const CoinDetail = () => {
   const coinData = useSelector((state) => state.coins);
@@ -9,16 +10,32 @@ const CoinDetail = () => {
   return (
     <div>
       <div className="nav detail-nav">
-        <Link to="/"><BsFillArrowLeftCircleFill /></Link>
-        <h4>{id}</h4>
+        <Link to="/"><FaChevronLeft /></Link>
+        <h2>{id.toUpperCase()}</h2>
       </div>
-      <div>
+      <div className="detail-container">
         {
       coinData.filter((coin) => coin.id === id).map((coin) => (
-        <div key={coin.id}>
-          <h4>{coin.coinName}</h4>
-          <p>{coin.rank}</p>
-          <p>{coin.priceUsd}</p>
+        <div key={coin.id} className="desc-cont">
+          <div className="title-coin">
+            <span>
+              COIN NAME:
+              {' '}
+              {coin.coinName}
+            </span>
+          </div>
+          <div className="desc">
+            <p>
+              RANK:
+              {' '}
+              {coin.rank}
+            </p>
+            <p>
+              COIN PRICE($):
+              {' '}
+              {parseFloat(coin.priceUsd).toFixed(3)}
+            </p>
+          </div>
         </div>
       ))
     }

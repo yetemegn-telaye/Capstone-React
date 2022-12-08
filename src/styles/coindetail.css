@@ -1,0 +1,28 @@
+.detail-nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.desc-cont {
+    margin: 35px;
+}
+.title-coin{
+    /* color: rgb(95, 22, 164); */
+    font-weight: 800;
+    font-size: larger;
+}
+.desc {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.desc p {
+    padding: 20px;
+    background-color: rgb(172, 137, 204);
+    box-shadow: 8px 5px 4px #dfdfdf;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
