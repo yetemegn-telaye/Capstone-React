@@ -19,7 +19,7 @@ const HomePage = () => {
       }
     }
     shouldFetch.current = true;
-  }, []);
+  }, [coinsArr.length, dispatch]);
   if (coinsArr.length > 0) {
     return (
       <div className="home-container">
