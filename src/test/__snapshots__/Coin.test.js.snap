@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Coin Coin renders correctly 1`] = `
+<div
+  className="coins-container"
+>
+  <div
+    className="coin-container"
+  >
+    <h4>
+      Bitcoin
+      BTC
+    </h4>
+    <p>
+      Rank:
+      1
+    </p>
+    <p>
+      Price:
+      16954.305
+    </p>
+    <a
+      href="/coin-details/bitcoin"
+      onClick={[Function]}
+    >
+      View
+    </a>
+  </div>
+</div>
+`;
