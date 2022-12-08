@@ -1,0 +1,12 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.coins-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  margin: 10px;
+}
