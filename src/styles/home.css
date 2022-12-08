@@ -1,18 +1,21 @@
-.home-nav{
+.home-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-form{
+
+form {
   display: flex;
   align-items: center;
   gap: 5px;
 }
+
 .search-icon {
-position: absolute;
-margin-left: 5px;
+  position: absolute;
+  margin-left: 5px;
 }
-form input{
+
+form input {
   padding: 10px;
   text-align: center;
   border-radius: 10px;
