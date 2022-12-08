@@ -1,11 +1,13 @@
-import renderer from 'react-test-renderer';
-import Coin from "../__mock__/Coin";
+import { render, cleanup } from '@testing-library/react';
+import Coin from '../__mock__/Coin';
 
+afterEach(() => {
+  cleanup();
+});
 
-
-describe('Coin', ()=>{
-    it('Coin renders correctly',()=>{
-        const coin = renderer.create(<Coin />).toJSON();
-        expect(coin).toMatchSnapshot();
-    });
+describe('Coin', () => {
+  it('Coin renders correctly', () => {
+    const coin = render(<Coin />);
+    expect(coin).toMatchSnapshot();
+  });
 });
