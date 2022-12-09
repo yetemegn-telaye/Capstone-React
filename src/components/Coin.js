@@ -26,10 +26,16 @@ const Coin = (props) => {
   );
 };
 Coin.propTypes = {
-  coinId: PropTypes.string.isRequired,
-  coinName: PropTypes.string.isRequired,
-  symbol: PropTypes.string.isRequired,
-  rank: PropTypes.string.isRequired,
+  coinId: PropTypes.string,
+  coinName: PropTypes.string,
+  symbol: PropTypes.string,
+  rank: PropTypes.string,
+};
+Coin.defaultProps = {
+  coinId: '',
+  coinName: '',
+  symbol: '',
+  rank: '',
 };
 
 export default Coin;
