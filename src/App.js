@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/coins" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/coin" element={<Coin />} />
         <Route path="/coin-details/:id" element={<CoinDetail />} />
       </Routes>
