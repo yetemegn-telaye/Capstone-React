@@ -21,7 +21,7 @@ const Coin = (props) => {
         RANK:
         {rank}
       </p>
-      <Link to={`/coin-details/${coinId}`}><FcRight /></Link>
+      <FcRight />
     </Link>
   );
 };
